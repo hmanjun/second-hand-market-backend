@@ -2,7 +2,7 @@ const express = require("express")
 const https = require("https")
 const cors = require('cors')
 
-//const db = require("./config/connection")
+const db = require("./config/connection")
 const PORT = 8080
 
 const app = express()

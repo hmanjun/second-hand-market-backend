@@ -28,14 +28,14 @@ const userSchema = new Schema(
             type: Number,
             required: true
         },
-        listings: {
+        listings: [{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'listing'
-        },
-        savedListings: {
+        }],
+        savedListings: [{
             type: mongoose.Schema.Types.ObjectId,
             ref: 'listing'
-        }
+        }]
     }
 )
 

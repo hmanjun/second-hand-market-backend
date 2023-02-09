@@ -1,6 +1,7 @@
 const express = require("express")
 const https = require("https")
 const cors = require('cors')
+const routes = require('./controllers')
 
 const db = require("./config/connection")
 const PORT = 8080
@@ -17,6 +18,8 @@ app.use(
         origin: "*" //Update to match the domain you will make requests from
     })
 )
+
+app.use(routes) //Connect defined request routes
 
 const server = new https.createServer(app)
 
